@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.3 on linux)" generated="2026-04-30T17:42:57.438036" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase1" source="/home/dmytro/Desktop/Robot/Tests/TestCase1.robot">
+<test id="s1-t1" name="TEST1" line="16">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-30T17:42:57.458065" level="INFO">my test variable</msg>
+<arg>${MY-VARIABLE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-30T17:42:57.457895" elapsed="0.000211"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-30T17:42:57.458325" level="INFO">test2</msg>
+<arg>${LIST}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-30T17:42:57.458190" elapsed="0.000157"/>
+</kw>
+<tag>demo1</tag>
+<tag>demo2</tag>
+<status status="PASS" start="2026-04-30T17:42:57.457529" elapsed="0.000880"/>
+</test>
+<doc>This is my first test case</doc>
+<status status="PASS" start="2026-04-30T17:42:57.438589" elapsed="0.019997"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">demo1</stat>
+<stat pass="1" fail="0" skip="0">demo2</stat>
+</tag>
+<suite>
+<stat name="TestCase1" id="s1" pass="1" fail="0" skip="0">TestCase1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
