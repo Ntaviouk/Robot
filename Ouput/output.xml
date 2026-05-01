@@ -1,36 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.12.3 on linux)" generated="2026-04-30T17:42:57.438036" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase1" source="/home/dmytro/Desktop/Robot/Tests/TestCase1.robot">
-<test id="s1-t1" name="TEST1" line="16">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-05-01T18:07:27.298490" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\User\Desktop\Robot\Tests">
+<suite id="s1-s1" name="TestCase1" source="C:\Users\User\Desktop\Robot\Tests\TestCase1.robot">
+<test id="s1-s1-t1" name="TEST1" line="7">
+<kw name="Log My Specific Username And Password" owner="resources">
+<msg time="2026-05-01T18:07:27.340465" level="TRACE">Arguments: [ ${USERNAME}='dmytro' | ${PASSWORD}='qwerty1234' ]</msg>
+<kw name="Log My Username" owner="resources">
+<msg time="2026-05-01T18:07:27.340932" level="TRACE">Arguments: [ ${USERNAME}='dmytro' ]</msg>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-04-30T17:42:57.458065" level="INFO">my test variable</msg>
-<arg>${MY-VARIABLE}</arg>
+<msg time="2026-05-01T18:07:27.341506" level="TRACE">Arguments: [ 'dmytro' ]</msg>
+<msg time="2026-05-01T18:07:27.341573" level="INFO">dmytro</msg>
+<msg time="2026-05-01T18:07:27.341608" level="TRACE">Return: None</msg>
+<arg>${USERNAME}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-30T17:42:57.457895" elapsed="0.000211"/>
+<status status="PASS" start="2026-05-01T18:07:27.341277" elapsed="0.000368"/>
 </kw>
+<msg time="2026-05-01T18:07:27.341714" level="TRACE">Return: None</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2026-05-01T18:07:27.340758" elapsed="0.000984"/>
+</kw>
+<kw name="Log My Password" owner="resources">
+<msg time="2026-05-01T18:07:27.341986" level="TRACE">Arguments: [ ${PASSWORD}='qwerty1234' ]</msg>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-04-30T17:42:57.458325" level="INFO">test2</msg>
-<arg>${LIST}[1]</arg>
+<msg time="2026-05-01T18:07:27.342257" level="TRACE">Arguments: [ 'qwerty1234' ]</msg>
+<msg time="2026-05-01T18:07:27.342304" level="INFO">qwerty1234</msg>
+<msg time="2026-05-01T18:07:27.342329" level="TRACE">Return: None</msg>
+<arg>${PASSWORD}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-30T17:42:57.458190" elapsed="0.000157"/>
+<status status="PASS" start="2026-05-01T18:07:27.342086" elapsed="0.000266"/>
+</kw>
+<msg time="2026-05-01T18:07:27.342389" level="TRACE">Return: None</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2026-05-01T18:07:27.341845" elapsed="0.000566"/>
+</kw>
+<msg time="2026-05-01T18:07:27.342438" level="TRACE">Return: None</msg>
+<arg>${DICTIONARY1}[username]</arg>
+<arg>${DICTIONARY2}[password]</arg>
+<status status="PASS" start="2026-05-01T18:07:27.340143" elapsed="0.002316"/>
 </kw>
 <tag>demo1</tag>
 <tag>demo2</tag>
-<status status="PASS" start="2026-04-30T17:42:57.457529" elapsed="0.000880"/>
+<status status="PASS" start="2026-05-01T18:07:27.339296" elapsed="0.003494"/>
 </test>
 <doc>This is my first test case</doc>
-<status status="PASS" start="2026-04-30T17:42:57.438589" elapsed="0.019997"/>
+<status status="PASS" start="2026-05-01T18:07:27.327616" elapsed="0.015880"/>
+</suite>
+<suite id="s1-s2" name="TestCase2" source="C:\Users\User\Desktop\Robot\Tests\TestCase2.robot">
+<test id="s1-s2-t1" name="TEST2" line="5">
+<kw name="Log My Specific Username And Password" owner="resources">
+<msg time="2026-05-01T18:07:27.346574" level="TRACE">Arguments: [ ${USERNAME}='antonia' | ${PASSWORD}='qwerty1234' ]</msg>
+<kw name="Log My Username" owner="resources">
+<msg time="2026-05-01T18:07:27.346811" level="TRACE">Arguments: [ ${USERNAME}='antonia' ]</msg>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-01T18:07:27.347056" level="TRACE">Arguments: [ 'antonia' ]</msg>
+<msg time="2026-05-01T18:07:27.347096" level="INFO">antonia</msg>
+<msg time="2026-05-01T18:07:27.347118" level="TRACE">Return: None</msg>
+<arg>${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-01T18:07:27.346896" elapsed="0.000246"/>
+</kw>
+<msg time="2026-05-01T18:07:27.347178" level="TRACE">Return: None</msg>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2026-05-01T18:07:27.346699" elapsed="0.000498"/>
+</kw>
+<kw name="Log My Password" owner="resources">
+<msg time="2026-05-01T18:07:27.347383" level="TRACE">Arguments: [ ${PASSWORD}='qwerty1234' ]</msg>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-01T18:07:27.347596" level="TRACE">Arguments: [ 'qwerty1234' ]</msg>
+<msg time="2026-05-01T18:07:27.347630" level="INFO">qwerty1234</msg>
+<msg time="2026-05-01T18:07:27.347651" level="TRACE">Return: None</msg>
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-01T18:07:27.347463" elapsed="0.000209"/>
+</kw>
+<msg time="2026-05-01T18:07:27.347702" level="TRACE">Return: None</msg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2026-05-01T18:07:27.347275" elapsed="0.000447"/>
+</kw>
+<msg time="2026-05-01T18:07:27.347746" level="TRACE">Return: None</msg>
+<arg>${DICTIONARY2}[username]</arg>
+<arg>${DICTIONARY2}[password]</arg>
+<status status="PASS" start="2026-05-01T18:07:27.346408" elapsed="0.001357"/>
+</kw>
+<tag>demo1</tag>
+<tag>demo2</tag>
+<status status="PASS" start="2026-05-01T18:07:27.346010" elapsed="0.002170"/>
+</test>
+<status status="PASS" start="2026-05-01T18:07:27.344082" elapsed="0.004607"/>
+</suite>
+<status status="PASS" start="2026-05-01T18:07:27.299769" elapsed="0.049536"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">demo1</stat>
-<stat pass="1" fail="0" skip="0">demo2</stat>
+<stat pass="2" fail="0" skip="0">demo1</stat>
+<stat pass="2" fail="0" skip="0">demo2</stat>
 </tag>
 <suite>
-<stat name="TestCase1" id="s1" pass="1" fail="0" skip="0">TestCase1</stat>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="TestCase1" id="s1-s1" pass="1" fail="0" skip="0">Tests.TestCase1</stat>
+<stat name="TestCase2" id="s1-s2" pass="1" fail="0" skip="0">Tests.TestCase2</stat>
 </suite>
 </statistics>
 <errors>

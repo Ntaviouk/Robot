@@ -1,8 +1,7 @@
 *** Settings ***
-Library         OperatingSystem
+Resource         ../Resources/resources.robot
 
 *** Test Cases ***
 TEST2
-    [Tags]      demo2
-    Log         This is my second test case
-
+    [Tags]        demo1    demo2
+    Log My Specific Username And Password    ${DICTIONARY2}[username]    ${DICTIONARY2}[password]
