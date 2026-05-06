@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-05-04T22:22:08.863583" rpa="false" schemaversion="5">
+<suite id="s1" name="TC2 POST Requests" source="C:\Users\User\Desktop\Robot\TestCases\TC2_POST_Requests.robot">
+<test id="s1-t1" name="Register New User" line="10">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-04T22:22:09.022503" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000/customer, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-04T22:22:09.022320" elapsed="0.000361"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-04T22:22:09.023496" level="INFO">${body} = {'FirstName': 'Dmytro', 'LastName': 'Daniuk', 'UserName': 'Ntaviouk', 'Password': 'Qwerty', 'Email': 'dimasdaniuk@gmail.com'}</msg>
+<var>${body}</var>
+<arg>FirstName=Dmytro</arg>
+<arg>LastName=Daniuk</arg>
+<arg>UserName=Ntaviouk</arg>
+<arg>Password=Qwerty</arg>
+<arg>Email=dimasdaniuk@gmail.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.023017" elapsed="0.000508"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-04T22:22:09.024100" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.023819" elapsed="0.000305"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-05-04T22:22:09.030002" level="INFO">POST Request : url=http://127.0.0.1:8000/customer/register 
+ path_url=/customer/register 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '125'} 
+ body=b'{"FirstName": "Dmytro", "LastName": "Daniuk", "UserName": "Ntaviouk", "Password": "Qwerty", "Email": "dimasdaniuk@gmail.com"}' 
+ </msg>
+<msg time="2026-05-04T22:22:09.030076" level="INFO">POST Response : url=http://127.0.0.1:8000/customer/register 
+ status=201, reason=Created 
+ headers={'date': 'Mon, 04 May 2026 19:22:08 GMT', 'server': 'uvicorn', 'content-length': '80', 'content-type': 'application/json'} 
+ body={"SuccessCode":"OPERATION_SUCCESS","Message":"Operation completed successfully"} 
+ </msg>
+<msg time="2026-05-04T22:22:09.030162" level="INFO">${responce} = &lt;Response [201]&gt;</msg>
+<var>${responce}</var>
+<arg>mysession</arg>
+<arg>/register</arg>
+<arg>json=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.024393" elapsed="0.005788"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${responce.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.030480" elapsed="0.000761"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${responce.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.031445" elapsed="0.000604"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-05-04T22:22:09.032778" level="INFO">${status_code} = 201</msg>
+<var>${status_code}</var>
+<arg>${responce.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.032321" elapsed="0.000479"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status_code}</arg>
+<arg>201</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.033048" elapsed="0.000411"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2026-05-04T22:22:09.034368" level="INFO">${res_body} = {"SuccessCode":"OPERATION_SUCCESS","Message":"Operation completed successfully"}</msg>
+<var>${res_body}</var>
+<arg>${responce.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.033671" elapsed="0.000729"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${res_body}</arg>
+<arg>OPERATION_SUCCESS</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.034909" elapsed="0.000697"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${res_body}</arg>
+<arg>Operation completed successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-05-04T22:22:09.035866" elapsed="0.000450"/>
+</kw>
+<status status="PASS" start="2026-05-04T22:22:09.021400" elapsed="0.015218"/>
+</test>
+<status status="PASS" start="2026-05-04T22:22:08.865081" elapsed="0.172199"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC2 POST Requests" id="s1" pass="1" fail="0" skip="0">TC2 POST Requests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
