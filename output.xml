@@ -1,460 +1,482 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-05-07T00:37:32.040792" rpa="false" schemaversion="5">
-<suite id="s1" name="TC" source="C:\Users\User\Desktop\Robot\VideoGameApi\TC.robot">
-<test id="s1-t1" name="TC1:Returns all the videos games(GET)" line="9">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-05-10T18:32:53.887445" rpa="false" schemaversion="5">
+<suite id="s1" name="TC8 ValidateHeadersAndCookies" source="C:\Users\User\Desktop\Robot\TestCases\TC8_ValidateHeadersAndCookies.robot">
+<test id="s1-t1" name="TestHeaders" line="9">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.195244" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-05-10T18:32:54.058831" level="INFO">Creating Session using : alias=mysession, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-07T00:37:32.195057" elapsed="0.000371"/>
+<status status="PASS" start="2026-05-10T18:32:54.058379" elapsed="0.000663"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.201487" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames 
- path_url=/app/videogames 
+<msg time="2026-05-10T18:32:54.862005" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/photos 
+ path_url=/photos 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-05-07T00:37:32.201584" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames 
+<msg time="2026-05-10T18:32:54.863302" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/photos 
  status=200, reason=OK 
- headers={'date': 'Wed, 06 May 2026 21:37:31 GMT', 'server': 'uvicorn', 'content-length': '483', 'content-type': 'application/json'} 
- body=[{"id":1,"name":"Red Dead Redemption 2","releaseDate":"2018-10-26","reviewScore":97,"category":"Action-Adventure","rating":"Mature"},{"id":2,"name":"Ghost of Tsushima","releaseDate":"2020-07-17","reviewScore":83,"category":"Action-Adventure","rating":"Mature"},{"id":3,"name":"Valorant","releaseDate":"2020-06-02","reviewScore":80,"category":"Tactical Shooter","rating":"Teen"},{"id":4,"name":"Raft","releaseDate":"2022-06-20","reviewScore":85,"category":"Survival","rating":"Teen"}] 
+ headers={'Date': 'Sun, 10 May 2026 15:32:53 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'Content-Encoding': 'gzip', 'etag': 'W/"105970-HCYFejK2YCxztz8++2rHnutkPOQ"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2BPYN0moBKrTlHDVw%2FdWE0HpcVsSgXTDE61UfnCY684U%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1777824298"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=%2BPYN0moBKrTlHDVw%2FdWE0HpcVsSgXTDE61UfnCY684U%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1777824298"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '998', 'x-ratelimit-reset': '1777824311', 'Age': '10934', 'cf-cache-status': 'HIT', 'CF-RAY': '9f99ffcb4862c259-VIE', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[
+  {
+    "albumId": 1,
+    "id": 1,
+    "title": "accusamus beatae ad facilis cum similique qui sunt",
+    "url": "https://via.placeholder.com/600/92c952",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+  },
+  {
+    "albumId": 1,
+    "id": 2,
+    "title": "reprehenderit est deserunt velit ipsam",
+    "url": "https://via.placeholder.com/600/771796",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796"
+  },
+  {
+    "albumId": 1,
+    "id": 3,
+    "title": "officia porro iure quia iusto qui ipsa ut modi",
+    "url": "https://via.placeholder.com/600/24f355",
+    "thumbnailUrl": "https://via.placeholder.com/150/24f355"
+  },
+  {
+    "albumId": 1,
+    "id": 4,
+    "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+    "url": "https://via.placeholder.com/600/d32776",
+    "thumbnailUrl": "https://via.placeholder.com/150/d32776"
+  },
+  {
+    "albumId": 1,
+    "id": 5,
+    "title": "natus nisi omnis corporis facere molestiae rerum in",
+    "url": "https://via.placeholder.com/600/f66b97",
+    "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
+  },
+  {
+    "albumId": 1,
+    "id": 6,
+    "title": "accusamus ea aliquid et amet sequi nemo",
+    "url": "https://via.placeholder.com/600/56a8c2",
+    "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
+  },
+  {
+    "albumId": 1,
+    "id": 7,
+    "title": "officia delectus consequatur vero aut veniam explicabo molestias",
+    "url": "https://via.placeholder.com/600/b0f7cc",
+    "thumbnailUrl": "https://via.placeholder.com/150/b0f7cc"
+  },
+  {
+    "albumId": 1,
+    "id": 8,
+    "title": "aut porro officiis laborum odit ea laudantium corporis",
+    "url": "https://via.placeholder.com/600/54176f",
+    "thumbnailUrl": "https://via.placeholder.com/150/54176f"
+  },
+  {
+    "albumId": 1,
+    "id": 9,
+    "title": "qui eius qui autem sed",
+    "url": "https://via.placeholder.com/600/51aa97",
+    "thumbnailUrl": "https://via.placeholder.com/150/51aa97"
+  },
+  {
+    "albumId": 1,
+    "id": 10,
+    "title": "beatae et provident et ut vel",
+    "url": "https://via.placeholder.com/600/810b14",
+    "thumbnailUrl": "https://via.placeholder.com/150/810b14"
+  },
+  {
+    "albumId": 1,
+    "id": 11,
+    "title": "nihil at amet non hic quia qui",
+    "url": "https://via.placeholder.com/600/1ee8a4",
+    "thumbnailUrl": "https://via.placeholder.com/150/1ee8a4"
+  },
+  {
+    "albumId": 1,
+    "id": 12,
+    "title": "mollitia soluta ut rerum eos aliquam consequatur perspiciatis maiores",
+    "url": "https://via.placeholder.com/600/66b7d2",
+    "thumbnailUrl": "https://via.placeholder.com/150/66b7d2"
+  },
+  {
+    "albumId": 1,
+    "id": 13,
+    "title": "repudiandae iusto deleniti rerum",
+    "url": "https://via.placeholder.com/600/197d29",
+    "thumbnailUrl": "https://via.placeholder.com/150/197d29"
+  },
+  {
+    "albumId": 1,
+    "id": 14,
+    "title": "est necessitatibus architecto ut laborum",
+    "url": "https://via.placeholder.com/600/61a65",
+    "thumbnailUrl": "https://via.placeholder.com/150/61a65"
+  },
+  {
+    "albumId": 1,
+    "id": 15,
+    "title": "harum dicta similique quis dolore earum ex qui",
+    "url": "https://via.placeholder.com/600/f9cee5",
+    "thumbnailUrl": "https://via.placeholder.com/150/f9cee5"
+  },
+  {
+    "albumId": 1,
+    "id": 16,
+    "title": "iusto sunt nobis quasi veritatis quas expedita voluptatum deserunt",
+    "url": "https://via.placeholder.com/600/fdf73e",
+    "thumbnailUrl": "https://via.placeholder.com/150/fdf73e"
+  },
+  {
+    "albumId": 1,
+    "id": 17,
+    "title": "natus doloribus necessitatibus ipsa",
+    "url": "https://via.placeholder.com/600/9c184f",
+    "thumbnailUrl": "https://via.placeholder.com/150/9c184f"
+  },
+  {
+    "albumId": 1,
+    "id": 18,
+    "title": "laboriosam odit nam necessitatibus et illum dolores reiciendis",
+    "url": "https://via.placeholder.com/600/1fe46f",
+    "thumbnailUrl": "https://via.placeholder.com/150/1fe46f"
+  },
+  {
+    "albumId": 1,
+    "id": 19,
+    "title": "perferendis nesciunt eveniet et optio a",
+    "url": "https://via.placeholder.com/600/56acb2",
+    "thumbnailUrl": "https://via.placeholder.com/150/56acb2"
+  },
+  {
+    "albumId": 1,
+    "id": 20,
+    "title": "assumenda voluptatem laboriosam enim consequatur veniam placeat reiciendis error",
+    "url": "https://via.placeholder.com/600/8985dc",
+    "thumbnailUrl": "https://via.placeholder.com/150/8985dc"
+  },
+  {
+    "albumId": 1,
+    "id": 21,
+    "title": "ad et natus qui",
+    "url": "https://via.placeholder.com/600/5e12c6",
+    "thumbnailUrl": "https://via.placeholder.com/150/5e12c6"
+  },
+  {
+    "albumId": 1,
+    "id": 22,
+    "title": "et ea illo et sit voluptas animi blanditiis porro",
+    "url": "https://via.placeholder.com/600/45601a",
+    "thumbnailUrl": "https://via.placeholder.com/150/45601a"
+  },
+  {
+    "albumId": 1,
+    "id": 23,
+    "title": "harum velit vero totam",
+    "url": "https://via.placeholder.com/600/e924e6",
+    "thumbnailUrl": "https://via.placeholder.com/150/e924e6"
+  },
+  {
+    "albumId": 1,
+    "id": 24,
+    "title": "beatae officiis ut aut",
+    "url": "https://via.placeholder.com/600/8f209a",
+    "thumbnailUrl": "https://via.placeholder.com/150/8f209a"
+  },
+  {
+    "albumId": 1,
+    "id": 25,
+    "title": "facere non quis fuga fugit vitae",
+    "url": "https://via.placeholder.com/600/5e3a73",
+    "thumbnailUrl": "https://via.placeholder.com/150/5e3a73"
+  },
+  {
+    "albumId": 1,
+    "id": 26,
+    "title": "asperiores nobis voluptate qui",
+    "url": "https://via.placeholder.com/600/474645",
+    "thumbnailUrl": "https://via.placeholder.com/150/474645"
+  },
+  {
+    "albumId": 1,
+    "id": 27,
+    "title": "sit asperiores est quos quis nisi veniam error",
+    "url": "https://via.placeholder.com/600/c984bf",
+    "thumbnailUrl": "https://via.placeholder.com/150/c984bf"
+  },
+  {
+    "albumId": 1,
+    "id": 28,
+    "title": "non neque eligendi molestiae repudiandae illum voluptatem qui aut",
+    "url": "https://via.placeholder.com/600/392537",
+    "thumbnailUrl": "https://via.placeholder.com/150/392537"
+  },
+  {
+    "albumId": 1,
+    "id": 29,
+    "title": "aut ipsam quos ab placeat omnis",
+    "url": "https://via.placeholder.com/600/602b9e",
+    "thumbnailUrl": "https://via.placeholder.com/150/602b9e"
+  },
+  {
+    "albumId": 1,
+    "id": 30,
+    "title": "odio enim voluptatem quidem aut nihil illum",
+    "url": "https://via.placeholder.com/600/372c93",
+    "thumbnailUrl": "https://via.placeholder.com/150/372c93"
+  },
+  {
+    "albumId": 1,
+    "id": 31,
+    "title": "voluptate voluptates sequi",
+    "url": "https://via.placeholder.com/600/a7c272",
+    "thumbnailUrl": "https://via.placeholder.com/150/a7c272"
+  },
+  {
+    "albumId": 1,
+    "id": 32,
+    "title": "ad enim dignissimos voluptatem similique",
+    "url": "https://via.placeholder.com/600/c70a4d",
+    "thumbnailUrl": "https://via.placeholder.com/150/c70a4d"
+  },
+  {
+    "albumId": 1,
+    "id": 33,
+    "title": "culpa ipsam nobis qui fuga magni et mollitia",
+    "url": "https://via.placeholder.com/600/501fe1",
+    "thumbnailUrl": "https://via.placeholder.com/150/501fe1"
+  },
+  {
+    "albumId": 1,
+    "id": 34,
+    "title": "vitae est facere quia itaque adipisci perferendis id maiores",
+    "url": "https://via.placeholder.com/600/35185e",
+    "thumbnailUrl": "https://via.placeholder.com/150/35185e"
+  },
+  {
+    "albumId": 1,
+    "id": 35,
+    "title": "tenetur minus voluptatum et",
+    "url": "https://via.placeholder.com/600/c96cad",
+    "thumbnailUrl": "https://via.placeholder.com/150/c96cad"
+  },
+  {
+    "albumId": 1,
+    "id": 36,
+    "title": "expedita rerum eaque",
+    "url": "https://via.placeholder.com/600/4d564d",
+    "thumbnailUrl": "https://via.placeholder.com/150/4d564d"
+  },
+  {
+    "albumId": 1,
+    "id": 37,
+    "title": "totam voluptas iusto deserunt dolores",
+    "url": "https://via.placeholder.com/600/ea51da",
+    "thumbnailUrl": "https://via.placeholder.com/150/ea51da"
+  },
+  {
+    "albumId": 1,
+    "id": 38,
+    "title": "natus magnam iure rerum pariatur molestias dolore nisi",
+    "url": "https://via.placeholder.com/600/4f5b8d",
+    "thumbnailUrl": "https://via.placeholder.com/150/4f5b8d"
+  },
+  {
+    "albumId": 1,
+    "id": 39,
+    "title": "molestiae nam ullam et rerum doloribus",
+    "url": "https://via.placeholder.com/600/1e71a2",
+    "thumbnailUrl": "https://via.placeholder.com/150/1e71a2"
+  },
+  {
+    "albumId": 1,
+    "id": 40,
+    "title": "est quas voluptates dignissimos sint praesentium nisi recusandae",
+    "url": "https://via.placeholder.com/600/3a0b95",
+    "thumbnailUrl": "https://via.placeholder.com/150/3a0b95"
+  },
+  {
+    "albumId": 1,
+    "id": 41,
+    "title": "in voluptatem doloremque cum atque architecto deleniti",
+    "url": "https://via.placeholder.com/600/659403",
+    "thumbnailUrl": "https://via.placeholder.com/150/659403"
+  },
+  {
+    "albumId": 1,
+    "id": 42,
+    "title": "voluptatibus a autem molestias voluptas architecto culpa",
+    "url": "https://via.placeholder.com/600/ca50ac",
+    "thumbnailUrl": "https://via.placeholder.com/150/ca50ac"
+  },
+  {
+    "albumId": 1,
+    "id": 43,
+    "title": "eius hic autem ad beatae voluptas",
+    "url": "https://via.placeholder.com/600/6ad437",
+    "thumbnailUrl": "https://via.placeholder.com/150/6ad437"
+  },
+  {
+    "albumId": 1,
+    "id": 44,
+    "title": "neque eum provident et inventore sed ipsam dignissimos quo",
+    "url": "https://via.placeholder.com/600/29fe9f",
+    "thumbnailUrl": "https://via.placeholder.com/150/29fe9f"
+  },
+  {
+    "albumId": 1,
+    "id": 45,
+    "title": "praesentium fugit quis aut voluptatum commodi dolore corrupti",
+    "url": "https://via.placeholder.com/600/c4084a",
+    "thumbnailUrl": "https://via.placeholder.com/150/c4084a"
+  },
+  {
+    "albumId": 1,
+    "id": 46,
+    "title": "quidem maiores in quia fugit dolore explicabo occaecati",
+    "url": "https://via.placeholder.com/600/e9b68",
+    "thumbnailUrl": "https://via.placeholder.com/150/e9b68"
+  },
+  {
+    "albumId": 1,
+    "id": 47,
+    "title": "et soluta est",... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg time="2026-05-07T00:37:32.201693" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-10T18:32:54.863633" level="INFO">C:\Users\User\Desktop\Robot\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-10T18:32:54.864271" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
-<arg>/app/videogames</arg>
+<arg>/photos</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.195773" elapsed="0.005942"/>
+<status status="PASS" start="2026-05-10T18:32:54.059368" elapsed="0.804988"/>
 </kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.202072" elapsed="0.000207"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.headers['Content-Type']}</arg>
+<arg>application/json; charset=utf-8</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-05-10T18:32:54.865017" elapsed="0.001495"/>
 </kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-05-07T00:37:32.202961" level="INFO">${content_type} = application/json</msg>
-<var>${content_type}</var>
-<arg>${response.headers}</arg>
-<arg>Content-Type</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.202566" elapsed="0.000415"/>
+<status status="PASS" start="2026-05-10T18:32:54.057140" elapsed="0.809757"/>
+</test>
+<test id="s1-t2" name="TestCookies" line="19">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-10T18:32:54.868143" level="INFO">Creating Session using : alias=mysession, url=https://github.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>https://github.com/</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-10T18:32:54.868023" elapsed="0.000294"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${content_type}</arg>
-<arg>application/json</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.203253" elapsed="0.000252"/>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-05-10T18:32:55.173706" level="INFO">GET Request : url=https://github.com/ 
+ path_url=/ 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-10T18:32:55.175622" level="INFO">GET Response : url=https://github.com/ 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 10 May 2026 15:32:48 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Vary': 'X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, Accept-Language, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With', 'content-language': 'en-US', 'ETag': 'W/"9f15d070594d2321984f2fbdca181c5a"', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Frame-Options': 'deny', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '0', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'Content-Security-Policy': "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com edge.fullstory.com rs.fullstory.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com www.youtube-nocookie.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com images.ctfassets.net/8aevphvgewt8/; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com assets.ctfassets.net/8aevphvgewt8/ videos.ctfassets.net/8aevphvgewt8/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/", 'Server': 'github.com', 'Content-Encoding': 'gzip', 'Accept-Ranges': 'bytes', 'Set-Cookie': '_gh_sess=Hp8%2B%2BOU5oK0ZEbnD7qnNOpur33sHYGvdgVyUs6YpL1Bt52c0ajp8uVv4sVuqrYubQiKysl1%2F4jW2Bbq2Tgoadgd7pkvmIyrrVvdMWICMXZnxfCfS%2Fnoign1ywSsGw4DTSLPQNIfvaubAVRZ2daEwSRF7ho6FIgm05kk4aI35qW91Bzuo7F7D94EAdZ9WI8XjgN%2FUO%2Bhb2V144nu84cgXJzL8bDrjWzEJOZfK00BfddUyRJMnZLEDxOSCG6VBAAKVDCJJ17tzZLnCfrlNf5TMCw%3D%3D--BTXsSP%2BoUqgiTSPr--2IAZzjGDolHPqjmXSAcrew%3D%3D; path=/; HttpOnly; secure; SameSite=Lax, _octo=GH1.1.1256537063.1778427174; expires=Mon, 10 May 2027 15:32:54 GMT; domain=.github.com; path=/; secure; SameSite=Lax, logged_in=no; expires=Mon, 10 May 2027 15:32:54 GMT; domain=.github.com; path=/; HttpOnly; secure; SameSite=Lax', 'X-GitHub-Request-Id': '50E9:2AE134:634CDBC:489C1AB:6A00A526', 'Transfer-Encoding': 'chunked'} 
+ body=
+
+
+
+
+
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html
+  lang="en"
+  data-color-mode="dark" data-dark-theme="dark"
+  data-color-mode="light" data-light-theme="light" data-dark-theme="dark"
+  data-a11y-animated-images="system" data-a11y-link-underlines="true"
+  
+  &gt;
+
+
+
+
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;link rel="dns-prefetch" href="https://github.githubassets.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://avatars.githubusercontent.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com"&gt;
+  &lt;link rel="dns-prefetch" href="https://user-images.githubusercontent.com/"&gt;
+  &lt;link rel="preconnect" href="https://github.githubassets.com" crossorigin&gt;
+  &lt;link rel="preconnect" href="https://avatars.githubusercontent.com"&gt;
+
+  
+    &lt;link crossorigin="anonymous" rel="preload" as="script" href="https://github.githubassets.com/assets/global-banner-disable-7f8c9b12bd1db3c7.js" /&gt;
+
+  &lt;link rel="preload" href="https://github.githubassets.com/assets/MonaSansVF-wdth-wght-opsz-902d64c7ad02.woff2" as="font" type="font/woff2" crossorigin&gt;
+
+
+  &lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light-2ff56e1b36116ee2.css" /&gt;&lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light_high_contrast-f7f95d7633592089.css" /&gt;&lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark-2d1fe43dbc9adf1f.css" /&gt;&lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark_high_contrast-d530ee188d165539.css" /&gt;&lt;link data-color-theme="light" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light-2ff56e1b36116ee2.css" /&gt;&lt;link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-f7f95d7633592089.css" /&gt;&lt;link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-e4bbc49fc7b82570.css" /&gt;&lt;link data-color-theme="light_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind_high_contrast-cc3f126b45166b83.css" /&gt;&lt;link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-652ca611ea4e33fe.css" /&gt;&lt;link data-color-theme="light_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia_high_contrast-9e82d635cb6c3f49.css" /&gt;&lt;link data-color-theme="dark" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark-2d1fe43dbc9adf1f.css" /&gt;&lt;link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-d530ee188d165539.css" /&gt;&lt;link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-3ad0ec21150df75b.css" /&gt;&lt;link data-color-theme="dark_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind_high_contrast-5691ff467f71a3f6.css" /&gt;&lt;link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-abee7710893cd168.css" /&gt;&lt;link data-color-theme="dark_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia_high_contrast-eafcf6cd46158360.css" /&gt;&lt;link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-c7974682a1a84c8d.css" /&gt;&lt;link data-color-theme="dark_dimmed_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed_high_contrast-f8dab3e04f94c501.css" /&gt;
+
+  &lt;style type="text/css"&gt;
+    :root {
+      --tab-size-preference: 4;
+    }
+
+    pre, code {
+      tab-size: var(--tab-size-preference);
+    }
+  &lt;/style&gt;
+
+    &lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-primitives-7f694b60439d06c0.css" /&gt;
+    &lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-b48faa60c69660fa.css" /&gt;
+    &lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/global-81a5f61ff87ac6f0.css" /&gt;
+    &lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-f825c0edd7ad57f8.css" /&gt;
+  &lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/site-8e580c38ab6535be.css" /&gt;
+&lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/landing-pages-270babc3e592e1db.css" /&gt;
+&lt;link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/home-b65ad196250a1364.css" /&gt;
+
+  
+
+  &lt;script type="application/json" id="client-env"&gt;{"locale":"en","featureFlags":["actions_custom_images_storage_billing_ui_visibility","actions_image_version_event","actions_workflow_language_service_allow_concurrency_queue","agent_conflict_resolution","alternate_user_config_repo","arianotify_comprehensive_migration","artifact_ui_v2","billing_discount_threshold_notification","code_scanning_dfa_degraded_experience_notice","codespaces_prebuild_region_target_update","codespaces_tab_react","coding_agent_model_selection","coding_agent_model_selection_all_skus","comment_viewer_copy_raw_markdown","contentful_primer_code_blocks","copilot_agent_snippy","copilot_api_agentic_issue_marshal_yaml","copilot_ask_mode_dropdown","copilot_automation_session_author","copilot_chat_attach_multiple_images","copilot_chat_category_rate_limit_messages","copilot_chat_clear_model_selection_for_default_change","copilot_chat_contextual_suggestions_updated","copilot_chat_enable_tool_call_logs","copilot_chat_file_redirect","copilot_chat_input_commands","copilot_chat_opening_thread_switch","copilot_chat_prettify_pasted_code","copilot_chat_reduce_quota_checks","copilot_chat_search_bar_redirect","copilot_chat_vision_in_claude","copilot_chat_vision_preview_gate","copilot_custom_copilots","copilot_custom_copilots_feature_preview","copilot_diff_explain_conversation_intent","copilot_diff_reference_context","copilot_dotcom_chat_cache_repo_autocomplete_results","copilot_duplicate_thread","copilot_extensions_hide_in_dotcom_chat","copilot_extensions_removal_on_marketplace","copilot_features_sql_server_logo","copilot_file_block_ref_matching","copilot_ftp_hyperspace_upgrade_prompt","copilot_icebreakers_experiment_dashboard","copilot_icebreakers_experiment_hyperspace","copilot_immersive_code_block_transition_wrap","copilot_immersive_embedded","copilot_immersive_embedded_deferred_payload","copilot_immersive_embedded_draggable","copilot_immersive_embedded_header_button","copilot_immersive_embedded_implicit_references","copilot_immersive_embedded_skip_copilot_api_token_for_dotcom_context","copilot_immersive_file_block_transition_open","copilot_immersive_file_preview_keep_mounted","copilot_immersive_job_result_preview","copilot_immersive_structured_model_picker","copilot_immersive_task_hyperlinking","copilot_immersive_task_within_chat_thread","copilot_mc_cli_resume_any_users_task","copilot_mission_control_agent_filtering","copilot_mission_control_always_send_integration_id","copilot_mission_control_cli_session_status","copilot_mission_control_initial_data_spinner","copilot_mission_control_logs_incremental","copilot_mission_control_task_alive_updates","copilot_mission_control_tasks_repo_filter","copilot_org_policy_page_focus_mode","copilot_redirect_header_button_to_agents","copilot_resource_panel","copilot_scroll_preview_tabs","copilot_share_active_subthread","copilot_spaces_ga","copilot_spaces_individual_policies_ga","copilot_spaces_pagination","copilot_spark_empty_state","copilot_spark_handle_nil_friendly_name","copilot_swe_agent_hide_model_picker_if_only_auto","copilot_swe_agent_pr_comment_model_picker","copilot_swe_agent_use_subagents","copilot_task_api_github_rest_style","copilot_unconfigured_is_inherited","copilot_upgrade_freeze","copilot_usage_metrics_ga","copilot_workbench_slim_line_top_tabs","custom_instructions_file_references","dashboard_indexeddb_caching","dashboard_lists_max_age_filter","dashboard_universe_2025_feedback_dialog","disable_preheating_for_issues","dotgithub_fork_warning","enterprise_managed_settings_for_copilot_clients","flex_cta_groups_mvp","global_nav_react","hyperspace_2025_logged_out_batch_1","hyperspace_2025_logged_out_batch_2","hyperspace_2025_logged_out_batch_3","ipm_global_transactional_message_agents","ipm_global_transactional_message_copilot","ipm_global_transactional_message_issues","ipm_global_transactional_message_prs","ipm_global_transactional_message_repos","ipm_global_transactional_message_spaces","issue_cca_modal_open","issue_cca_multi_assign_modal","issue_cca_task_side_panel","issue_cca_visualization","issue_cca_visualization_session_panel","issue_fields_global_search","issues_expanded_file_types","issues_lazy_load_comment_box_suggestions","issues_react_chrome_container_query_fix","issues_search_type_gql","landing_pages_ninetailed","landing_pages_web_vitals_tracking","lifecycle_label_name_updates","low_quality_classifier","marketing_pages_search_explore_provider","memex_default_issue_create_repository","memex_live_update_hovercard","memex_mwl_filter_field_delimiter","memex_remove_deprecated_type_issu... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-10T18:32:55.176360" level="INFO">C:\Users\User\Desktop\Robot\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-10T18:32:55.177025" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-10T18:32:54.868631" elapsed="0.308485"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.204232" level="INFO">${json_data} = [{'id': 1, 'name': 'Red Dead Redemption 2', 'releaseDate': '2018-10-26', 'reviewScore': 97, 'category': 'Action-Adventure', 'rating': 'Mature'}, {'id': 2, 'name': 'Ghost of Tsushima', 'releaseDate': '...</msg>
-<var>${json_data}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.203797" elapsed="0.000456"/>
-</kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.204828" level="INFO">Length is 4.</msg>
-<msg time="2026-05-07T00:37:32.204883" level="INFO">${list_length} = 4</msg>
-<var>${list_length}</var>
-<arg>${json_data}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.204537" elapsed="0.000361"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${list_length} &gt; 0</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.205196" elapsed="0.000249"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.205978" level="INFO">${first_game} = {'id': 1, 'name': 'Red Dead Redemption 2', 'releaseDate': '2018-10-26', 'reviewScore': 97, 'category': 'Action-Adventure', 'rating': 'Mature'}</msg>
-<var>${first_game}</var>
-<arg>${json_data}[0]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.205743" elapsed="0.000256"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.cookies}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-10T18:32:55.177826" elapsed="0.001337"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${first_game}</arg>
-<arg>name</arg>
+<arg>${response.cookies}</arg>
+<arg>_gh_sess</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.206648" elapsed="0.000123"/>
+<status status="PASS" start="2026-05-10T18:32:55.179666" elapsed="0.000791"/>
 </kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${first_game}</arg>
-<arg>category</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.207048" elapsed="0.000114"/>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-05-10T18:32:55.181914" level="INFO">Length is 346.</msg>
+<arg>${response.cookies['_gh_sess']}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-05-10T18:32:55.180961" elapsed="0.001022"/>
 </kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${first_game}[name]</arg>
-<arg>Red Dead Redemption 2</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.207412" elapsed="0.000218"/>
-</kw>
-<status status="PASS" start="2026-05-07T00:37:32.194033" elapsed="0.013906"/>
+<status status="PASS" start="2026-05-10T18:32:54.867559" elapsed="0.314859"/>
 </test>
-<test id="s1-t2" name="TC2:Returns all the videos games(POST)" line="31">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.209322" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-07T00:37:32.209184" elapsed="0.000294"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.210585" level="INFO">${body} = {'id': 5, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 82, 'category': 'Shooter', 'rating': 'Mature'}</msg>
-<var>${body}</var>
-<arg>id=${5}</arg>
-<arg>name=CounterStrike2</arg>
-<arg>releaseDate=2022-01-01</arg>
-<arg>reviewScore=${82}</arg>
-<arg>category=Shooter</arg>
-<arg>rating=Mature</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.209694" elapsed="0.000917"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.211302" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.210936" elapsed="0.000397"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.214805" level="INFO">POST Request : url=http://127.0.0.1:8000/app/videogames 
- path_url=/app/videogames 
- headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '126'} 
- body=b'{"id": 5, "name": "CounterStrike2", "releaseDate": "2022-01-01", "reviewScore": 82, "category": "Shooter", "rating": "Mature"}' 
- </msg>
-<msg time="2026-05-07T00:37:32.214888" level="INFO">POST Response : url=http://127.0.0.1:8000/app/videogames 
- status=201, reason=Created 
- headers={'date': 'Wed, 06 May 2026 21:37:31 GMT', 'server': 'uvicorn', 'content-length': '38', 'content-type': 'application/json'} 
- body={"status":"Record Added Successfully"} 
- </msg>
-<msg time="2026-05-07T00:37:32.215030" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/app/videogames</arg>
-<arg>json=${body}</arg>
-<arg>headers=${header}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.211615" elapsed="0.003461"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.215676" elapsed="0.000708"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.216661" elapsed="0.000575"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>201</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.217489" elapsed="0.000135"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.218254" level="INFO">${json_data} = {'status': 'Record Added Successfully'}</msg>
-<var>${json_data}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.217869" elapsed="0.000407"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${json_data}[status]</arg>
-<arg>Record Added Successfully</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.218561" elapsed="0.000208"/>
-</kw>
-<status status="PASS" start="2026-05-07T00:37:32.208766" elapsed="0.010552"/>
-</test>
-<test id="s1-t3" name="TC3: Returns the detail of a single game by ID(GET)" line="56">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.220591" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-07T00:37:32.220491" elapsed="0.000215"/>
-</kw>
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.223218" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames/5 
- path_url=/app/videogames/5 
- headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2026-05-07T00:37:32.223273" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames/5 
- status=200, reason=OK 
- headers={'date': 'Wed, 06 May 2026 21:37:31 GMT', 'server': 'uvicorn', 'content-length': '115', 'content-type': 'application/json'} 
- body={"id":5,"name":"CounterStrike2","releaseDate":"2022-01-01","reviewScore":82,"category":"Shooter","rating":"Mature"} 
- </msg>
-<msg time="2026-05-07T00:37:32.223357" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/app/videogames/5</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.220941" elapsed="0.002433"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.223638" elapsed="0.000541"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.224401" elapsed="0.000539"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.225121" elapsed="0.000147"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.225899" level="INFO">${json_data} = {'id': 5, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 82, 'category': 'Shooter', 'rating': 'Mature'}</msg>
-<var>${json_data}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.225466" elapsed="0.000454"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.226238" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${json_data}[id]</arg>
-<arg>5</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.226076" elapsed="0.000222"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${json_data}[name]</arg>
-<arg>CounterStrike2</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.226504" elapsed="0.000268"/>
-</kw>
-<status status="PASS" start="2026-05-07T00:37:32.220081" elapsed="0.006928"/>
-</test>
-<test id="s1-t4" name="TC4:Update an existing video game by specifying a new body(PUT)" line="72">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.228141" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-07T00:37:32.228016" elapsed="0.000248"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.229429" level="INFO">${body} = {'id': 5, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 5, 'category': 'Shooter', 'rating': 'Mature'}</msg>
-<var>${body}</var>
-<arg>id=${5}</arg>
-<arg>name=CounterStrike2</arg>
-<arg>releaseDate=2022-01-01</arg>
-<arg>reviewScore=${5}</arg>
-<arg>category=Shooter</arg>
-<arg>rating=Mature</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.228531" elapsed="0.000932"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.230025" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.229785" elapsed="0.000261"/>
-</kw>
-<kw name="PUT On Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.233151" level="INFO">PUT Request : url=http://127.0.0.1:8000/app/videogames/5 
- path_url=/app/videogames/5 
- headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '125'} 
- body=b'{"id": 5, "name": "CounterStrike2", "releaseDate": "2022-01-01", "reviewScore": 5, "category": "Shooter", "rating": "Mature"}' 
- </msg>
-<msg time="2026-05-07T00:37:32.233205" level="INFO">PUT Response : url=http://127.0.0.1:8000/app/videogames/5 
- status=200, reason=OK 
- headers={'date': 'Wed, 06 May 2026 21:37:31 GMT', 'server': 'uvicorn', 'content-length': '114', 'content-type': 'application/json'} 
- body={"id":5,"name":"CounterStrike2","releaseDate":"2022-01-01","reviewScore":5,"category":"Shooter","rating":"Mature"} 
- </msg>
-<msg time="2026-05-07T00:37:32.233287" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/app/videogames/5</arg>
-<arg>json=${body}</arg>
-<arg>headers=${header}</arg>
-<doc>Sends a PUT request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.230348" elapsed="0.002956"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.233647" elapsed="0.000598"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.234476" elapsed="0.000556"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.235255" elapsed="0.000116"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-05-07T00:37:32.235940" level="INFO">${content_type} = application/json</msg>
-<var>${content_type}</var>
-<arg>${response.headers}</arg>
-<arg>Content-Type</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.235659" elapsed="0.000298"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${content_type}</arg>
-<arg>application/json</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.236243" elapsed="0.000191"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.237357" level="INFO">${json_data} = {'id': 5, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 5, 'category': 'Shooter', 'rating': 'Mature'}</msg>
-<var>${json_data}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.237005" elapsed="0.000370"/>
-</kw>
-<kw name="Dictionaries Should Be Equal" owner="Collections">
-<arg>${json_data}</arg>
-<arg>${body}</arg>
-<doc>Fails if the given dictionaries are not equal.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.237632" elapsed="0.000128"/>
-</kw>
-<status status="PASS" start="2026-05-07T00:37:32.227671" elapsed="0.010362"/>
-</test>
-<test id="s1-t5" name="TC5: Deletes a video game by ID (DELETE)" line="100">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.239065" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-07T00:37:32.238972" elapsed="0.000191"/>
-</kw>
-<kw name="DELETE On Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.241888" level="INFO">DELETE Request : url=http://127.0.0.1:8000/app/videogames/5 
- path_url=/app/videogames/5 
- headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
- body=None 
- </msg>
-<msg time="2026-05-07T00:37:32.241960" level="INFO">DELETE Response : url=http://127.0.0.1:8000/app/videogames/5 
- status=200, reason=OK 
- headers={'date': 'Wed, 06 May 2026 21:37:31 GMT', 'server': 'uvicorn', 'content-length': '40', 'content-type': 'application/json'} 
- body={"status":"Record Deleted Successfully"} 
- </msg>
-<msg time="2026-05-07T00:37:32.242063" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/app/videogames/5</arg>
-<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.239317" elapsed="0.002766"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.242285" elapsed="0.000572"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.243100" elapsed="0.000801"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.244141" elapsed="0.000207"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.245073" level="INFO">${json_data} = {'status': 'Record Deleted Successfully'}</msg>
-<var>${json_data}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.244601" elapsed="0.000495"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${json_data}[status]</arg>
-<arg>Record Deleted Successfully</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.245361" elapsed="0.000255"/>
-</kw>
-<status status="PASS" start="2026-05-07T00:37:32.238699" elapsed="0.007179"/>
-</test>
-<test id="s1-t6" name="TC6: Deletion Check(GET)" line="113">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.247166" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-07T00:37:32.247032" elapsed="0.000258"/>
-</kw>
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-05-07T00:37:32.250005" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames/5 
- path_url=/app/videogames/5 
- headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2026-05-07T00:37:32.250059" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames/5 
- status=404, reason=Not Found 
- headers={'date': 'Wed, 06 May 2026 21:37:31 GMT', 'server': 'uvicorn', 'content-length': '33', 'content-type': 'application/json'} 
- body={"detail":"Video game not found"} 
- </msg>
-<msg time="2026-05-07T00:37:32.250138" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/app/videogames/5</arg>
-<arg>expected_status=404</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.247473" elapsed="0.002681"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.250523" elapsed="0.000594"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.251383" elapsed="0.000565"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>404</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.252193" elapsed="0.000114"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-07T00:37:32.252955" level="INFO">${json_data} = {'detail': 'Video game not found'}</msg>
-<var>${json_data}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.252605" elapsed="0.000367"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${json_data}[detail]</arg>
-<arg>Video game not found</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-07T00:37:32.253272" elapsed="0.000197"/>
-</kw>
-<status status="PASS" start="2026-05-07T00:37:32.246581" elapsed="0.007203"/>
-</test>
-<status status="PASS" start="2026-05-07T00:37:32.042389" elapsed="0.212289"/>
+<status status="PASS" start="2026-05-10T18:32:53.888826" elapsed="1.294912"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="TC" id="s1" pass="6" fail="0" skip="0">TC</stat>
+<stat name="TC8 ValidateHeadersAndCookies" id="s1" pass="2" fail="0" skip="0">TC8 ValidateHeadersAndCookies</stat>
 </suite>
 </statistics>
 <errors>

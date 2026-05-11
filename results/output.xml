@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-05-10T18:32:10.170233" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="C:\Users\User\Desktop\Robot">
+<suite id="s1-s1" name="TestCases" source="C:\Users\User\Desktop\Robot\TestCases">
+<suite id="s1-s1-s1" name="TC8 ValidateHeadersAndCookies" source="C:\Users\User\Desktop\Robot\TestCases\TC8_ValidateHeadersAndCookies.robot">
+<test id="s1-s1-s1-t1" name="TestCookies" line="19">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-10T18:32:10.349595" level="INFO">Creating Session using : alias=mysession, url=https://github.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>https://github.com/</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-10T18:32:10.349205" elapsed="0.000772"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-05-10T18:32:10.350460" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+<msg time="2026-05-10T18:32:10.353175" level="FAIL">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-05-10T18:32:10.350219" elapsed="0.004476">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.cookies}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-05-10T18:32:10.354882" elapsed="0.000114"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.cookies}</arg>
+<arg>_gh_sess</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2026-05-10T18:32:10.355106" elapsed="0.000088"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${response.cookies['_gh_sess']}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2026-05-10T18:32:10.355294" elapsed="0.000079"/>
+</kw>
+<status status="FAIL" start="2026-05-10T18:32:10.347071" elapsed="0.008468">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</status>
+</test>
+<status status="FAIL" start="2026-05-10T18:32:10.218737" elapsed="0.138416"/>
+</suite>
+<status status="FAIL" start="2026-05-10T18:32:10.215370" elapsed="0.143438"/>
+</suite>
+<status status="FAIL" start="2026-05-10T18:32:10.176693" elapsed="0.183474"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot" id="s1" pass="0" fail="1" skip="0">Robot</stat>
+<stat name="TestCases" id="s1-s1" pass="0" fail="1" skip="0">Robot.TestCases</stat>
+<stat name="TC8 ValidateHeadersAndCookies" id="s1-s1-s1" pass="0" fail="1" skip="0">Robot.TestCases.TC8 ValidateHeadersAndCookies</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-05-10T18:32:10.350460" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+</errors>
+</robot>
