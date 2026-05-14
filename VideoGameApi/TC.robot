@@ -2,12 +2,14 @@
 Library        RequestsLibrary
 Library        Collections
 
+Suite Setup       Create Session    mysession    ${BASE_URL}
+Suite Teardown    Clean Up Database And Sessions
+
 *** Variables ***
 ${BASE_URL}        http://127.0.0.1:8000
 
 *** Test Cases ***
 TC1:Returns all the videos games(GET)
-    Create Session    mysession       ${BASE_URL}
     ${response}=      GET On Session  mysession    /app/videogames
 
     Status Should Be    200    ${response}
@@ -20,7 +22,6 @@ TC1:Returns all the videos games(GET)
     ${list_length}=     Get Length      ${json_data}
     Should Be True      ${list_length} > 0
 
-
     ${first_game}=      Set Variable       ${json_data}[0]
     Dictionary Should Contain Key    ${first_game}    name
     Dictionary Should Contain Key    ${first_game}    category
@@ -29,8 +30,6 @@ TC1:Returns all the videos games(GET)
 
 
 TC2:Returns all the videos games(POST)
-    Create Session     mysession    ${BASE_URL}
-
      ${body}=      Create Dictionary
     ...    id=${5}
     ...    name=CounterStrike2
@@ -54,8 +53,6 @@ TC2:Returns all the videos games(POST)
 
 
 TC3: Returns the detail of a single game by ID(GET)
-    Create Session     mysession    ${BASE_URL}
-
     ${response}=    Get On Session    mysession    /app/videogames/5
 
     Log to Console    ${response.status_code}
@@ -70,8 +67,6 @@ TC3: Returns the detail of a single game by ID(GET)
 
 
 TC4:Update an existing video game by specifying a new body(PUT)
-    Create Session     mysession    ${BASE_URL}
-
     ${body}=      Create Dictionary
     ...    id=${5}
     ...    name=CounterStrike2
@@ -98,7 +93,6 @@ TC4:Update an existing video game by specifying a new body(PUT)
 
 
 TC5: Deletes a video game by ID (DELETE)
-    Create Session     mysession    ${BASE_URL}
     ${response}=    Delete On Session    mysession    /app/videogames/5
 
     Log to Console    ${response.status_code}
@@ -111,8 +105,6 @@ TC5: Deletes a video game by ID (DELETE)
     Should Be Equal As Strings     ${json_data}[status]    Record Deleted Successfully
 
 TC6: Deletion Check(GET)
-    Create Session     mysession    ${BASE_URL}
-
     ${response}=    Get On Session    mysession    /app/videogames/5    expected_status=404
 
     Log to Console    ${response.status_code}
@@ -123,3 +115,9 @@ TC6: Deletion Check(GET)
     ${json_data}=       Set Variable    ${response.json()}
 
     Should Be Equal As Strings     ${json_data}[detail]    Video game not found
+
+
+*** Keywords ***
+Clean Up Database And Sessions
+    Delete On Session    mysession    /app/videogames/5    expected_status=any
+    Delete All Sessions
