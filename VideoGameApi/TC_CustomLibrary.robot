@@ -48,7 +48,6 @@ TC3: Returns the detail of a single game by ID(GET)
     Status Should Be    200    ${response}
     ${json_data}=       Set Variable    ${response.json()}
 
-    # Використовуємо лібу для повної перевірки структури
     Validate Game Schema    ${json_data}
 
     Should Be Equal As Integers    ${json_data}[id]    ${NEW_GAME_ID}
@@ -56,17 +55,17 @@ TC3: Returns the detail of a single game by ID(GET)
 
 TC4:Update an existing video game by specifying a new body(PUT)
     ${body}=      Create Dictionary
-    ...    id=${5}
+    ...    id=${NEW_GAME_ID}
     ...    name=CounterStrike2
     ...    releaseDate=2022-01-01
-    ...    reviewScore=${5}
+    ...    reviewScore=${85}
     ...    category=Shooter
     ...    rating=Mature
 
     ${header}=    Create Dictionary
     ...    Content-Type=application/json
 
-    ${response}=    Put On Session    mysession    /app/videogames/5    json=${body}    headers=${header}
+    ${response}=    Put On Session    mysession    /app/videogames/${NEW_GAME_ID}    json=${body}    headers=${header}
 
     Log to Console    ${response.status_code}
     Log to Console    ${response.content}
@@ -81,7 +80,7 @@ TC4:Update an existing video game by specifying a new body(PUT)
 
 
 TC5: Deletes a video game by ID (DELETE)
-    ${response}=    Delete On Session    mysession    /app/videogames/5
+    ${response}=    Delete On Session    mysession    /app/videogames/${NEW_GAME_ID}
 
     Log to Console    ${response.status_code}
     Log to Console    ${response.content}
@@ -93,7 +92,7 @@ TC5: Deletes a video game by ID (DELETE)
     Should Be Equal As Strings     ${json_data}[status]    Record Deleted Successfully
 
 TC6: Deletion Check(GET)
-    ${response}=    Get On Session    mysession    /app/videogames/5    expected_status=404
+    ${response}=    Get On Session    mysession    /app/videogames/${NEW_GAME_ID}    expected_status=404
 
     Log to Console    ${response.status_code}
     Log to Console    ${response.content}
@@ -107,5 +106,5 @@ TC6: Deletion Check(GET)
 
 *** Keywords ***
 Clean Up Database And Sessions
-    Delete On Session    mysession    /app/videogames/5    expected_status=any
+    Delete On Session    mysession    /app/videogames/${NEW_GAME_ID}    expected_status=any
     Delete All Sessions
