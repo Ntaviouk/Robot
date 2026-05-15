@@ -1,207 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.12.3 on linux)" generated="2026-05-15T18:10:53.502486" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.12.3 on linux)" generated="2026-05-15T18:12:49.675814" rpa="false" schemaversion="5">
 <suite id="s1" name="TC CustomLibrary" source="/home/dmytro/Desktop/Robot/VideoGameApi/TC_CustomLibrary.robot">
 <kw name="Create Session" owner="RequestsLibrary" type="SETUP">
-<msg time="2026-05-15T18:10:53.594188" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-05-15T18:12:49.747239" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:8000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>mysession</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-05-15T18:10:53.594070" elapsed="0.000234"/>
+<status status="PASS" start="2026-05-15T18:12:49.747127" elapsed="0.000233"/>
 </kw>
 <test id="s1-t1" name="TC1:Returns all the videos games(GET)" line="13">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.597018" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames 
+<msg time="2026-05-15T18:12:49.749272" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames 
  path_url=/app/videogames 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-05-15T18:10:53.597110" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames 
+<msg time="2026-05-15T18:12:49.749333" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames 
  status=200, reason=OK 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '483', 'content-type': 'application/json'} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '483', 'content-type': 'application/json'} 
  body=[{"id":1,"name":"Red Dead Redemption 2","releaseDate":"2018-10-26","reviewScore":97,"category":"Action-Adventure","rating":"Mature"},{"id":2,"name":"Ghost of Tsushima","releaseDate":"2020-07-17","reviewScore":83,"category":"Action-Adventure","rating":"Mature"},{"id":3,"name":"Valorant","releaseDate":"2020-06-02","reviewScore":80,"category":"Tactical Shooter","rating":"Teen"},{"id":4,"name":"Raft","releaseDate":"2022-06-20","reviewScore":85,"category":"Survival","rating":"Teen"}] 
  </msg>
-<msg time="2026-05-15T18:10:53.597221" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-15T18:12:49.749404" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/app/videogames</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.594561" elapsed="0.002690"/>
+<status status="PASS" start="2026-05-15T18:12:49.747603" elapsed="0.001814"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.597447" elapsed="0.000148"/>
+<status status="PASS" start="2026-05-15T18:12:49.749510" elapsed="0.000120"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-05-15T18:10:53.598047" level="INFO">${content_type} = application/json</msg>
+<msg time="2026-05-15T18:12:49.750040" level="INFO">${content_type} = application/json</msg>
 <var>${content_type}</var>
 <arg>${response.headers}</arg>
 <arg>Content-Type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.597667" elapsed="0.000393"/>
+<status status="PASS" start="2026-05-15T18:12:49.749689" elapsed="0.000364"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${content_type}</arg>
 <arg>application/json</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.598138" elapsed="0.000174"/>
+<status status="PASS" start="2026-05-15T18:12:49.750115" elapsed="0.000159"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.598637" level="INFO">${json_data} = [{'id': 1, 'name': 'Red Dead Redemption 2', 'releaseDate': '2018-10-26', 'reviewScore': 97, 'category': 'Action-Adventure', 'rating': 'Mature'}, {'id': 2, 'name': 'Ghost of Tsushima', 'releaseDate': '...</msg>
+<msg time="2026-05-15T18:12:49.750589" level="INFO">${json_data} = [{'id': 1, 'name': 'Red Dead Redemption 2', 'releaseDate': '2018-10-26', 'reviewScore': 97, 'category': 'Action-Adventure', 'rating': 'Mature'}, {'id': 2, 'name': 'Ghost of Tsushima', 'releaseDate': '...</msg>
 <var>${json_data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.598377" elapsed="0.000272"/>
+<status status="PASS" start="2026-05-15T18:12:49.750339" elapsed="0.000262"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.598896" level="INFO">Length is 4.</msg>
-<msg time="2026-05-15T18:10:53.598929" level="INFO">${list_length} = 4</msg>
+<msg time="2026-05-15T18:12:49.750841" level="INFO">Length is 4.</msg>
+<msg time="2026-05-15T18:12:49.750875" level="INFO">${list_length} = 4</msg>
 <var>${list_length}</var>
 <arg>${json_data}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.598708" elapsed="0.000230"/>
+<status status="PASS" start="2026-05-15T18:12:49.750658" elapsed="0.000226"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${list_length} &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.598994" elapsed="0.000154"/>
+<status status="PASS" start="2026-05-15T18:12:49.750940" elapsed="0.000151"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.599324" level="INFO">${first_game} = {'id': 1, 'name': 'Red Dead Redemption 2', 'releaseDate': '2018-10-26', 'reviewScore': 97, 'category': 'Action-Adventure', 'rating': 'Mature'}</msg>
+<msg time="2026-05-15T18:12:49.751266" level="INFO">${first_game} = {'id': 1, 'name': 'Red Dead Redemption 2', 'releaseDate': '2018-10-26', 'reviewScore': 97, 'category': 'Action-Adventure', 'rating': 'Mature'}</msg>
 <var>${first_game}</var>
 <arg>${json_data}[0]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.599203" elapsed="0.000132"/>
+<status status="PASS" start="2026-05-15T18:12:49.751147" elapsed="0.000129"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${first_game}</arg>
 <arg>name</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.599387" elapsed="0.000067"/>
+<status status="PASS" start="2026-05-15T18:12:49.751337" elapsed="0.000068"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${first_game}</arg>
 <arg>category</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.599518" elapsed="0.000062"/>
+<status status="PASS" start="2026-05-15T18:12:49.751465" elapsed="0.000060"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${first_game}[name]</arg>
 <arg>Red Dead Redemption 2</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.599628" elapsed="0.000118"/>
+<status status="PASS" start="2026-05-15T18:12:49.751573" elapsed="0.000113"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.594376" elapsed="0.005429"/>
+<status status="PASS" start="2026-05-15T18:12:49.747426" elapsed="0.004317"/>
 </test>
 <test id="s1-t2" name="TC2: Creates a new video game (POST)" line="33">
 <kw name="Generate Random Game Payload" owner="VideoGamesLib">
-<msg time="2026-05-15T18:10:53.600096" level="INFO">${body} = {'id': 5980, 'name': 'AutoTest Game 5980', 'releaseDate': '2024-05-14', 'reviewScore': 65, 'category': 'Action', 'rating': 'Mature'}</msg>
+<msg time="2026-05-15T18:12:49.752035" level="INFO">${body} = {'id': 1277, 'name': 'AutoTest Game 1277', 'releaseDate': '2024-05-14', 'reviewScore': 76, 'category': 'Action', 'rating': 'Mature'}</msg>
 <var>${body}</var>
-<status status="PASS" start="2026-05-15T18:10:53.600036" elapsed="0.000071"/>
+<status status="PASS" start="2026-05-15T18:12:49.751970" elapsed="0.000076"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.600482" level="INFO">${NEW_GAME_ID} = 5980</msg>
+<msg time="2026-05-15T18:12:49.752425" level="INFO">${NEW_GAME_ID} = 1277</msg>
 <arg>${NEW_GAME_ID}</arg>
 <arg>${body}[id]</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.600165" elapsed="0.000335"/>
+<status status="PASS" start="2026-05-15T18:12:49.752104" elapsed="0.000340"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.600703" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<msg time="2026-05-15T18:12:49.752665" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
 <var>${header}</var>
 <arg>Content-Type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.600560" elapsed="0.000153"/>
+<status status="PASS" start="2026-05-15T18:12:49.752503" elapsed="0.000174"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.643645" level="INFO">POST Request : url=http://127.0.0.1:8000/app/videogames 
+<msg time="2026-05-15T18:12:49.794742" level="INFO">POST Request : url=http://127.0.0.1:8000/app/videogames 
  path_url=/app/videogames 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '132'} 
- body=b'{"id": 5980, "name": "AutoTest Game 5980", "releaseDate": "2024-05-14", "reviewScore": 65, "category": "Action", "rating": "Mature"}' 
+ body=b'{"id": 1277, "name": "AutoTest Game 1277", "releaseDate": "2024-05-14", "reviewScore": 76, "category": "Action", "rating": "Mature"}' 
  </msg>
-<msg time="2026-05-15T18:10:53.643740" level="INFO">POST Response : url=http://127.0.0.1:8000/app/videogames 
+<msg time="2026-05-15T18:12:49.794845" level="INFO">POST Response : url=http://127.0.0.1:8000/app/videogames 
  status=201, reason=Created 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '38', 'content-type': 'application/json'} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '38', 'content-type': 'application/json'} 
  body={"status":"Record Added Successfully"} 
  </msg>
-<msg time="2026-05-15T18:10:53.643882" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-05-15T18:12:49.794980" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/app/videogames</arg>
 <arg>json=${body}</arg>
 <arg>headers=${header}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.600766" elapsed="0.043139"/>
+<status status="PASS" start="2026-05-15T18:12:49.752734" elapsed="0.042262"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>201</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.644124" elapsed="0.000222"/>
+<status status="PASS" start="2026-05-15T18:12:49.795161" elapsed="0.000134"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.645110" level="INFO">${json_data} = {'status': 'Record Added Successfully'}</msg>
+<msg time="2026-05-15T18:12:49.795768" level="INFO">${json_data} = {'status': 'Record Added Successfully'}</msg>
 <var>${json_data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.644541" elapsed="0.000593"/>
+<status status="PASS" start="2026-05-15T18:12:49.795428" elapsed="0.000353"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${json_data}[status]</arg>
 <arg>Record Added Successfully</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.645298" elapsed="0.000233"/>
+<status status="PASS" start="2026-05-15T18:12:49.795842" elapsed="0.000134"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.599902" elapsed="0.045743"/>
+<status status="PASS" start="2026-05-15T18:12:49.751840" elapsed="0.044207"/>
 </test>
 <test id="s1-t3" name="TC3: Returns the detail of a single game by ID(GET)" line="45">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.687495" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames/5980 
- path_url=/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.837532" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames/1277 
+ path_url=/app/videogames/1277 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-05-15T18:10:53.687563" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.837600" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames/1277 
  status=200, reason=OK 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '121', 'content-type': 'application/json'} 
- body={"id":5980,"name":"AutoTest Game 5980","releaseDate":"2024-05-14","reviewScore":65,"category":"Action","rating":"Mature"} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '121', 'content-type': 'application/json'} 
+ body={"id":1277,"name":"AutoTest Game 1277","releaseDate":"2024-05-14","reviewScore":76,"category":"Action","rating":"Mature"} 
  </msg>
-<msg time="2026-05-15T18:10:53.687655" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-15T18:12:49.837691" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/app/videogames/${NEW_GAME_ID}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.645971" elapsed="0.041697"/>
+<status status="PASS" start="2026-05-15T18:12:49.796302" elapsed="0.041401"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.687897" elapsed="0.000169"/>
+<status status="PASS" start="2026-05-15T18:12:49.837849" elapsed="0.000136"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.688569" level="INFO">${json_data} = {'id': 5980, 'name': 'AutoTest Game 5980', 'releaseDate': '2024-05-14', 'reviewScore': 65, 'category': 'Action', 'rating': 'Mature'}</msg>
+<msg time="2026-05-15T18:12:49.838408" level="INFO">${json_data} = {'id': 1277, 'name': 'AutoTest Game 1277', 'releaseDate': '2024-05-14', 'reviewScore': 76, 'category': 'Action', 'rating': 'Mature'}</msg>
 <var>${json_data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.688153" elapsed="0.000431"/>
+<status status="PASS" start="2026-05-15T18:12:49.838050" elapsed="0.000371"/>
 </kw>
 <kw name="Validate Game Schema" owner="VideoGamesLib">
 <arg>${json_data}</arg>
-<status status="PASS" start="2026-05-15T18:10:53.688670" elapsed="0.001692"/>
+<status status="PASS" start="2026-05-15T18:12:49.838482" elapsed="0.001461"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
 <arg>${json_data}[id]</arg>
 <arg>${NEW_GAME_ID}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.690480" elapsed="0.000230"/>
+<status status="PASS" start="2026-05-15T18:12:49.840012" elapsed="0.000161"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.645791" elapsed="0.044999"/>
+<status status="PASS" start="2026-05-15T18:12:49.796154" elapsed="0.044082"/>
 </test>
 <test id="s1-t4" name="TC4:Update an existing video game by specifying a new body(PUT)" line="56">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.691413" level="INFO">${body} = {'id': 5980, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 85, 'category': 'Shooter', 'rating': 'Mature'}</msg>
+<msg time="2026-05-15T18:12:49.840806" level="INFO">${body} = {'id': 1277, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 85, 'category': 'Shooter', 'rating': 'Mature'}</msg>
 <var>${body}</var>
 <arg>id=${NEW_GAME_ID}</arg>
 <arg>name=CounterStrike2</arg>
@@ -210,207 +210,207 @@
 <arg>category=Shooter</arg>
 <arg>rating=Mature</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.691061" elapsed="0.000366"/>
+<status status="PASS" start="2026-05-15T18:12:49.840486" elapsed="0.000333"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.691624" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<msg time="2026-05-15T18:12:49.840996" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
 <var>${header}</var>
 <arg>Content-Type=application/json</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.691497" elapsed="0.000139"/>
+<status status="PASS" start="2026-05-15T18:12:49.840882" elapsed="0.000124"/>
 </kw>
 <kw name="PUT On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.734559" level="INFO">PUT Request : url=http://127.0.0.1:8000/app/videogames/5980 
- path_url=/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.882558" level="INFO">PUT Request : url=http://127.0.0.1:8000/app/videogames/1277 
+ path_url=/app/videogames/1277 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '129'} 
- body=b'{"id": 5980, "name": "CounterStrike2", "releaseDate": "2022-01-01", "reviewScore": 85, "category": "Shooter", "rating": "Mature"}' 
+ body=b'{"id": 1277, "name": "CounterStrike2", "releaseDate": "2022-01-01", "reviewScore": 85, "category": "Shooter", "rating": "Mature"}' 
  </msg>
-<msg time="2026-05-15T18:10:53.734623" level="INFO">PUT Response : url=http://127.0.0.1:8000/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.882623" level="INFO">PUT Response : url=http://127.0.0.1:8000/app/videogames/1277 
  status=200, reason=OK 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '118', 'content-type': 'application/json'} 
- body={"id":5980,"name":"CounterStrike2","releaseDate":"2022-01-01","reviewScore":85,"category":"Shooter","rating":"Mature"} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '118', 'content-type': 'application/json'} 
+ body={"id":1277,"name":"CounterStrike2","releaseDate":"2022-01-01","reviewScore":85,"category":"Shooter","rating":"Mature"} 
  </msg>
-<msg time="2026-05-15T18:10:53.734713" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-15T18:12:49.882715" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/app/videogames/${NEW_GAME_ID}</arg>
 <arg>json=${body}</arg>
 <arg>headers=${header}</arg>
 <doc>Sends a PUT request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.691694" elapsed="0.043033"/>
+<status status="PASS" start="2026-05-15T18:12:49.841060" elapsed="0.041669"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.734875" elapsed="0.000383"/>
+<status status="PASS" start="2026-05-15T18:12:49.882886" elapsed="0.000385"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.735340" elapsed="0.000254"/>
+<status status="PASS" start="2026-05-15T18:12:49.883352" elapsed="0.000245"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.735658" elapsed="0.000089"/>
+<status status="PASS" start="2026-05-15T18:12:49.883657" elapsed="0.000084"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-05-15T18:10:53.735990" level="INFO">${content_type} = application/json</msg>
+<msg time="2026-05-15T18:12:49.883985" level="INFO">${content_type} = application/json</msg>
 <var>${content_type}</var>
 <arg>${response.headers}</arg>
 <arg>Content-Type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.735805" elapsed="0.000197"/>
+<status status="PASS" start="2026-05-15T18:12:49.883797" elapsed="0.000199"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${content_type}</arg>
 <arg>application/json</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.736057" elapsed="0.000132"/>
+<status status="PASS" start="2026-05-15T18:12:49.884051" elapsed="0.000128"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.736489" level="INFO">${json_data} = {'id': 5980, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 85, 'category': 'Shooter', 'rating': 'Mature'}</msg>
+<msg time="2026-05-15T18:12:49.884502" level="INFO">${json_data} = {'id': 1277, 'name': 'CounterStrike2', 'releaseDate': '2022-01-01', 'reviewScore': 85, 'category': 'Shooter', 'rating': 'Mature'}</msg>
 <var>${json_data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.736242" elapsed="0.000260"/>
+<status status="PASS" start="2026-05-15T18:12:49.884236" elapsed="0.000279"/>
 </kw>
 <kw name="Dictionaries Should Be Equal" owner="Collections">
 <arg>${json_data}</arg>
 <arg>${body}</arg>
 <doc>Fails if the given dictionaries are not equal.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.736574" elapsed="0.000083"/>
+<status status="PASS" start="2026-05-15T18:12:49.884590" elapsed="0.000094"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.690891" elapsed="0.045824"/>
+<status status="PASS" start="2026-05-15T18:12:49.840327" elapsed="0.044424"/>
 </test>
 <test id="s1-t5" name="TC5: Deletes a video game by ID (DELETE)" line="82">
 <kw name="DELETE On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.778491" level="INFO">DELETE Request : url=http://127.0.0.1:8000/app/videogames/5980 
- path_url=/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.926525" level="INFO">DELETE Request : url=http://127.0.0.1:8000/app/videogames/1277 
+ path_url=/app/videogames/1277 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg time="2026-05-15T18:10:53.778556" level="INFO">DELETE Response : url=http://127.0.0.1:8000/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.926589" level="INFO">DELETE Response : url=http://127.0.0.1:8000/app/videogames/1277 
  status=200, reason=OK 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '40', 'content-type': 'application/json'} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '40', 'content-type': 'application/json'} 
  body={"status":"Record Deleted Successfully"} 
  </msg>
-<msg time="2026-05-15T18:10:53.778696" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-05-15T18:12:49.926729" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/app/videogames/${NEW_GAME_ID}</arg>
 <doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.736939" elapsed="0.041771"/>
+<status status="PASS" start="2026-05-15T18:12:49.885003" elapsed="0.041740"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.778852" elapsed="0.000373"/>
+<status status="PASS" start="2026-05-15T18:12:49.926892" elapsed="0.000356"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.779297" elapsed="0.000262"/>
+<status status="PASS" start="2026-05-15T18:12:49.927312" elapsed="0.000228"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.779621" elapsed="0.000086"/>
+<status status="PASS" start="2026-05-15T18:12:49.927593" elapsed="0.000080"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.779999" level="INFO">${json_data} = {'status': 'Record Deleted Successfully'}</msg>
+<msg time="2026-05-15T18:12:49.927954" level="INFO">${json_data} = {'status': 'Record Deleted Successfully'}</msg>
 <var>${json_data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.779764" elapsed="0.000246"/>
+<status status="PASS" start="2026-05-15T18:12:49.927728" elapsed="0.000237"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${json_data}[status]</arg>
 <arg>Record Deleted Successfully</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.780063" elapsed="0.000136"/>
+<status status="PASS" start="2026-05-15T18:12:49.928017" elapsed="0.000118"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.736803" elapsed="0.043465"/>
+<status status="PASS" start="2026-05-15T18:12:49.884849" elapsed="0.043346"/>
 </test>
 <test id="s1-t6" name="TC6: Deletion Check(GET)" line="94">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.822658" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames/5980 
- path_url=/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.971515" level="INFO">GET Request : url=http://127.0.0.1:8000/app/videogames/1277 
+ path_url=/app/videogames/1277 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-05-15T18:10:53.822808" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames/5980 
+<msg time="2026-05-15T18:12:49.971580" level="INFO">GET Response : url=http://127.0.0.1:8000/app/videogames/1277 
  status=404, reason=Not Found 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '33', 'content-type': 'application/json'} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '33', 'content-type': 'application/json'} 
  body={"detail":"Video game not found"} 
  </msg>
-<msg time="2026-05-15T18:10:53.823046" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<msg time="2026-05-15T18:12:49.971670" level="INFO">${response} = &lt;Response [404]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/app/videogames/${NEW_GAME_ID}</arg>
 <arg>expected_status=404</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.780508" elapsed="0.042586"/>
+<status status="PASS" start="2026-05-15T18:12:49.928423" elapsed="0.043261"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.823422" elapsed="0.000851"/>
+<status status="PASS" start="2026-05-15T18:12:49.971825" elapsed="0.000365"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response.content}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.824470" elapsed="0.000478"/>
+<status status="PASS" start="2026-05-15T18:12:49.972256" elapsed="0.000240"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>404</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.825067" elapsed="0.000158"/>
+<status status="PASS" start="2026-05-15T18:12:49.972558" elapsed="0.000084"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-15T18:10:53.825812" level="INFO">${json_data} = {'detail': 'Video game not found'}</msg>
+<msg time="2026-05-15T18:12:49.972932" level="INFO">${json_data} = {'detail': 'Video game not found'}</msg>
 <var>${json_data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.825350" elapsed="0.000484"/>
+<status status="PASS" start="2026-05-15T18:12:49.972698" elapsed="0.000245"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${json_data}[detail]</arg>
 <arg>Video game not found</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.825942" elapsed="0.000238"/>
+<status status="PASS" start="2026-05-15T18:12:49.973001" elapsed="0.000118"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.780362" elapsed="0.045925"/>
+<status status="PASS" start="2026-05-15T18:12:49.928283" elapsed="0.044896"/>
 </test>
 <kw name="Clean Up Database And Sessions" type="TEARDOWN">
 <kw name="DELETE On Session" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.869585" level="INFO">DELETE Request : url=http://127.0.0.1:8000/app/videogames/5980 
- path_url=/app/videogames/5980 
+<msg time="2026-05-15T18:12:50.016542" level="INFO">DELETE Request : url=http://127.0.0.1:8000/app/videogames/1277 
+ path_url=/app/videogames/1277 
  headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg time="2026-05-15T18:10:53.869683" level="INFO">DELETE Response : url=http://127.0.0.1:8000/app/videogames/5980 
+<msg time="2026-05-15T18:12:50.016610" level="INFO">DELETE Response : url=http://127.0.0.1:8000/app/videogames/1277 
  status=404, reason=Not Found 
- headers={'date': 'Fri, 15 May 2026 15:10:52 GMT', 'server': 'uvicorn', 'content-length': '33', 'content-type': 'application/json'} 
+ headers={'date': 'Fri, 15 May 2026 15:12:49 GMT', 'server': 'uvicorn', 'content-length': '33', 'content-type': 'application/json'} 
  body={"detail":"Video game not found"} 
  </msg>
 <arg>mysession</arg>
 <arg>/app/videogames/${NEW_GAME_ID}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-05-15T18:10:53.827270" elapsed="0.042501"/>
+<status status="PASS" start="2026-05-15T18:12:49.973765" elapsed="0.042901"/>
 </kw>
 <kw name="Delete All Sessions" owner="RequestsLibrary">
-<msg time="2026-05-15T18:10:53.870033" level="INFO">Deleting All Sessions</msg>
+<msg time="2026-05-15T18:12:50.016841" level="INFO">Deleting All Sessions</msg>
 <doc>Removes all the session objects</doc>
-<status status="PASS" start="2026-05-15T18:10:53.869934" elapsed="0.000172"/>
+<status status="PASS" start="2026-05-15T18:12:50.016776" elapsed="0.000110"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.826862" elapsed="0.043308"/>
+<status status="PASS" start="2026-05-15T18:12:49.973520" elapsed="0.043407"/>
 </kw>
-<status status="PASS" start="2026-05-15T18:10:53.502963" elapsed="0.367239"/>
+<status status="PASS" start="2026-05-15T18:12:49.676386" elapsed="0.340561"/>
 </suite>
 <statistics>
 <total>
